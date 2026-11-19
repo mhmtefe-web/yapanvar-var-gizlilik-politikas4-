@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAPAN VAR - Gizlilik Politikası, KVKK ve Kullanım Koşulları</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --nav: #0b1220;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --warn-bg: rgba(245, 158, 11, 0.14);
+      --warn-border: rgba(245, 158, 11, 0.5);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 24px 14px 48px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--nav);
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(56, 189, 248, 0.16);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .nav a:hover { background: rgba(56, 189, 248, 0.28); }
+    h1 { margin-top: 0; font-size: 1.85rem; color: #fff; }
+    h2.doc-title {
+      margin-top: 40px;
+      font-size: 1.45rem;
+      color: #fff;
+      background: rgba(56, 189, 248, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 10px 14px;
+      border-radius: 6px;
+    }
+    h3 { margin-top: 22px; font-size: 1.08rem; color: var(--accent); border-bottom: 1px solid rgba(148, 163, 184, 0.2); padding-bottom: 5px; }
+    p, li { color: var(--text); font-size: 0.97rem; }
+    ul { padding-left: 20px; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .notice {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 16px 0;
+    }
+    a { color: var(--accent); }
+    hr { border: none; border-top: 1px solid rgba(148, 163, 184, 0.2); margin: 36px 0; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>YAPAN VAR Yasal Bilgilendirme</h1>
+    <div class="meta">
+      <strong>Uygulama:</strong> YAPAN VAR (<code>com.aistudio.ustabul.gkdws</code>)<br />
+      <strong>Son Güncelleme:</strong> 18 Kasım 2026<br />
+      <strong>Veri Sorumlusu / İletişim:</strong> <a href="mailto:mehmetefek771@gmail.com">mehmetefek771@gmail.com</a>
+    </div>
+
+    <nav class="nav" aria-label="Yasal Belgeler">
+      <a href="#gizlilik">1. Gizlilik Politikası</a>
+      <a href="#kvkk">2. KVKK Aydınlatma Metni</a>
+      <a href="#kosullar">3. Kullanım Koşulları</a>
+    </nav>
+
+    <!-- 1. GİZLİLİK POLİTİKASI -->
+    <section id="gizlilik">
+      <h2 class="doc-title">1. YAPAN VAR Gizlilik Politikası</h2>
+      <p>
+        Yapan Var uygulaması olarak kullanıcılarımızın gizliliğine saygı duyuyor, kişisel verilerinizi 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Google Play Geliştirici Programı Politikaları doğrultusunda korumayı taahhüt ediyoruz.
+      </p>
+
+      <h3>1.1. Toplanan Bilgiler ve Altyapı</h3>
+      <ul>
+        <li><strong>Hesap ve Kimlik Bilgileri:</strong> Ad soyad, e-posta adresi, telefon numarası, hesap rolü (Müşteri / Usta) ve Firebase Authentication kullanıcı kimliği (UID). Şifreleriniz Google Firebase Authentication tarafından tek yönlü kriptolanır; tarafımızca düz metin olarak görüntülenemez.</li>
+        <li><strong>Profil ve Medya Dosyaları:</strong> Profil fotoğrafı, kapak/portföy/ilan görselleri, ustalık belgeleri (PDF/görsel), şehir/ilçe, uzmanlık alanları ve yazılı kullanıcı değerlendirmeleri <strong>Firebase Storage</strong> ve <strong>Cloud Firestore</strong> altyapısında güvenli erişim kurallarıyla saklanır.</li>
+        <li><strong>Bildirim Verileri:</strong> İş, teklif ve randevu bildirimlerinin iletilmesi için Firebase Cloud Messaging (FCM) cihaz bildirim belirteci işlenir.</li>
+      </ul>
+
+      <h3>1.2. Uygulama İzinleri</h3>
+      <ul>
+        <li><strong>İnternet ve Ağ Erişimi (INTERNET, ACCESS_NETWORK_STATE):</strong> Sunucu bağlantısı, veritabanı senkronizasyonu ve satın alma doğrulaması için kullanılır.</li>
+        <li><strong>Bildirimler (POST_NOTIFICATIONS):</strong> İsteğe bağlı olarak anlık bildirimler için kullanıcı onayına sunulur.</li>
+        <li><strong>Medya Seçimi:</strong> Görsel ve belge yüklemeleri sıfır izinli Android sistem fotoğraf seçicisi (Photo Picker) üzerinden yapılır; geniş dosya/galeri depolama izni, konum (GPS), kamera veya mikrofon izni talep edilmez.</li>
+      </ul>
+
+      <h3>1.3. İletişim Bilgilerinin Gizliliği</h3>
+      <p>
+        Telefon numaranız ve e-posta adresiniz herkese açık ilanlarda veya genel profil listelerinde kesinlikle yayınlanmaz. İletişim bilgileriniz ayrı ve korumalı koleksiyonlarda saklanır; yalnızca kredi kullanımıyla yapılan yetkili iletişim açma veya iş eşleşmesi sonrasında ilgili kullanıcıya gösterilir.
+      </p>
+
+      <h3>1.4. Ödeme Verileri ve Kredi İade Politikası</h3>
+      <ul>
+        <li>Uygulama içindeki kredi paketleri (5, 10, 25 ve 50 Kredi) yalnızca <strong>Google Play Billing</strong> altyapısı üzerinden satılır.</li>
+        <li>Kredi/banka kartı bilgileriniz Yapan Var tarafından toplanmaz, işlenmez ve saklanmaz; ödeme doğrudan Google Play tarafından işlenir.</li>
+        <li>Satın alma doğrulaması ve mükerrer kredi yüklemesini engellemek amacıyla yalnızca Google Play satın alma belirteci, sipariş numarası, ürün kodu ve kredi defteri kaydı sunucu tarafında (<strong>Supabase Edge Functions</strong> ve <strong>Firebase Firestore</strong>) doğrulanarak kaydedilir.</li>
+      </ul>
+      <div class="notice">
+        <strong>Dijital Kredi İade Edilmezlik Politikası:</strong> Uygulama üzerinden satın alınan kredi paketleri anında teslim edilen, tüketilebilir dijital içerik niteliğindedir. Kredi satın alma işlemi tamamlanıp krediler hesabınıza yüklendikten sonra <strong>satın alınan krediler iade edilmez, iptal edilmez ve nakde çevrilmez</strong>. Yalnızca teknik bir hata nedeniyle kredinin hesaba hiç tanımlanmaması durumu ile Google Play politikaları ve yürürlükteki zorunlu tüketici mevzuatı kapsamındaki istisnalar saklıdır. Google Play üzerinden gerçekleşen ters ibraz/iade durumlarında ilgili kredi miktarı bakiyeden düşülür.
+      </div>
+
+      <h3>1.5. Verilerin Paylaşımı, Saklanması ve Hesap Silme</h3>
+      <p>
+        Kişisel verileriniz üçüncü taraf reklam şirketlerine satılmaz. Veriler yalnızca uygulamanın çalışması için zorunlu Google Firebase, Google Play ve Supabase teknik servisleriyle işlenir. Verileriniz hesabınız aktif olduğu sürece saklanır. Uygulama içerisindeki <strong>"Profil &gt; Hesabımı Sil"</strong> seçeneğiyle veya <a href="mailto:mehmetefek771@gmail.com">mehmetefek771@gmail.com</a> adresine başvurarak hesabınızı kalıcı olarak silebilirsiniz.
+      </p>
+
+      <h3>1.6. Çocukların Gizliliği</h3>
+      <p>
+        Yapan Var uygulaması 18 yaşın altındaki bireylere yönelik değildir ve bilerek 18 yaş altındaki kullanıcılardan kişisel veri toplamaz.
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- 2. KVKK AYDINLATMA METNİ -->
+    <section id="kvkk">
+      <h2 class="doc-title">2. KVKK Aydınlatma Metni</h2>
+      <p>
+        6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında Veri Sorumlusu <strong>YAPAN VAR</strong> (<a href="mailto:mehmetefek771@gmail.com">mehmetefek771@gmail.com</a>) olarak kişisel verilerinizi aşağıdaki kapsamda işlemekteyiz.
+      </p>
+
+      <h3>2.1. İşlenen Kişisel Veriler</h3>
+      <ul>
+        <li><strong>Kimlik ve İletişim:</strong> Ad soyad, e-posta adresi, telefon numarası ve Firebase Authentication kullanıcı kimliği (UID).</li>
+        <li><strong>Profil ve Mesleki Veriler:</strong> Profil/kapak/portföy fotoğrafları, biyografi, şehir, ilçe, uzmanlık alanları, hizmet bölgeleri, çalışma saatleri, ustalık belgesi ve yazılı değerlendirmeler.</li>
+        <li><strong>İlan, Teklif, Randevu ve Şikayet:</strong> İlan başlık/açıklaması, bütçe, kategori, ilan görselleri, teklifler, randevular, mağaza/ürün kayıtları ve şikayet kayıtları.</li>
+        <li><strong>Kredi ve İşlem Kayıtları:</strong> Google Play satın alma doğrulama kayıtları ve kredi defteri hareketleri (kart bilgileriniz tarafımızda saklanmaz).</li>
+        <li><strong>Bildirim Belirteci:</strong> Firebase Cloud Messaging (FCM) cihaz belirteci.</li>
+      </ul>
+
+      <h3>2.2. Kişisel Verilerin İşlenme Amaçları ve Aktarımı</h3>
+      <ul>
+        <li>Kullanıcı kaydı, güvenli kimlik doğrulama, yönetici onayları, ilan/teklif/randevu eşleştirme süreçlerinin yürütülmesi.</li>
+        <li>Google Play satın almalarının sunucu tarafında doğrulanması, çift kredi yüklemesinin önlenmesi ve kredi bakiyesi yönetimi.</li>
+        <li>İletişim bilgilerinin izinsiz paylaşımına karşı otomatik filtreleme, şikayet inceleme ve yasal yükümlülüklerin yerine getirilmesi.</li>
+        <li>Altyapı gereği Google Firebase (Authentication, Firestore, Storage, Cloud Functions, Cloud Messaging), Google Play ve Supabase servislerine teknik aktarım yapılması (pazarlama/reklam amaçlı üçüncü taraf paylaşımı yapılmaz).</li>
+      </ul>
+
+      <h3>2.3. KVKK Madde 11 Kapsamındaki Haklarınız</h3>
+      <p>
+        KVKK'nın 11. maddesi gereğince verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini talep etme haklarına sahipsiniz. Uygulamadaki <strong>"Profil &gt; Hesabımı Sil"</strong> butonundan veya <a href="mailto:mehmetefek771@gmail.com">mehmetefek771@gmail.com</a> adresinden talepte bulunabilirsiniz.
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- 3. KULLANIM KOŞULLARI -->
+    <section id="kosullar">
+      <h2 class="doc-title">3. YAPAN VAR Kullanım Koşulları</h2>
+      <h3>3.1. Platformun Rolü ve Kullanıcı Sorumlulukları</h3>
+      <ul>
+        <li>Yapan Var, hizmet arayan müşteriler ile hizmet sunan ustaları bir araya getiren aracı bir platformdur; hizmetlerin doğrudan sağlayıcısı veya işvereni değildir.</li>
+        <li>Kayıt sırasında verilen bilgilerin doğru ve güncel olması zorunludur. Oluşturulan ilan ve verilen hizmetlerin yasalara uygunluğundan kullanıcılar bizzat sorumludur.</li>
+      </ul>
+
+      <h3>3.2. İletişim Bilgisi Paylaşım Kuralları ve Moderasyon</h3>
+      <ul>
+        <li>İlanların herkese açık başlık ve açıklama alanlarında telefon numarası, WhatsApp, Telegram veya sosyal medya iletişim bilgisi paylaşılması yasaktır; sistem bu bilgileri otomatik olarak filtreler.</li>
+        <li>Kural ihlali veya şikayet üzerine ihlali tespit edilen ilan ve hesaplar yönetici tarafından kaldırılabilir veya kapatılabilir.</li>
+      </ul>
+
+      <h3>3.3. Krediler, Dijital İşlemler ve İade Politikası</h3>
+      <div class="notice">
+        <ul>
+          <li>İletişim bilgisi açma ve teklif verme gibi özellikler kredi sistemiyle çalışır. Kredi paketleri Google Play Billing üzerinden satın alınır.</li>
+          <li>Satın alınan krediler anında hesaba tanımlanan tüketilebilir dijital içeriktir. Ödeme tamamlanıp krediler hesabınıza yüklendikten sonra <strong>krediler iade edilmez, başka hesaba devredilmez ve nakde çevrilmez</strong>.</li>
+          <li>Teknik aksaklık nedeniyle ödemesi alınan kredi hesaba yansımazsa <strong>"Kredi Satın Al &gt; Bekleyen Satın Alımları Kontrol Et / Geri Yükle"</strong> butonundan veya <a href="mailto:mehmetefek771@gmail.com">mehmetefek771@gmail.com</a> adresinden destek alınabilir. Google Play üzerinden gerçekleşen iade/iptal işlemlerinde ilgili kredi tutarı kullanıcı bakiyesinden düşülür.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
